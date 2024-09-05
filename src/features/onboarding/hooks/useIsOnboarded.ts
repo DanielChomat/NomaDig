@@ -1,6 +1,5 @@
 export const useIsOnboarded = () => {
+  // TODO: Connect this to a Zustand Global state management
 
-    // TODO: Connect this to a Zustand Global state management
-
-    return true;
+  return true
 }

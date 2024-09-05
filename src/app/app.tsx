@@ -1,19 +1,19 @@
-import { TamaguiProvider, Theme, ThemeName } from "tamagui"
+import { useEffect } from 'react'
+import { TamaguiProvider, Theme, ThemeName } from 'tamagui'
 
-import { useFonts } from "expo-font"
+import { createStaticNavigation, StaticParamList } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { useFonts } from 'expo-font'
+import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context'
 
-import { customFontsToLoad } from "../theme/typography"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { createStaticNavigation, StaticParamList } from "@react-navigation/native"
-import { useEffect } from "react"
-import { useIsOnboarded } from "../features/onboarding/hooks/useIsOnboarded"
-import { IntroductionScreen } from "../features/onboarding/screens/IntroductionScreen"
-import { ExplanationScreen } from "../features/onboarding/screens/ExplanationScreen"
-import { config } from "../../tamagui.config"
-import { initialWindowMetrics, SafeAreaProvider } from "react-native-safe-area-context"
-import { useAppColorScheme } from "../hooks/useAppColorScheme"
-import { DefaultScreen } from "../features/dashboard/DefaultScreen"
-import { TabsNavigator } from "./navigators/TabsNavigator"
+import { config } from '../../tamagui.config'
+import { DefaultScreen } from '../features/dashboard/DefaultScreen'
+import { useIsOnboarded } from '../features/onboarding/hooks/useIsOnboarded'
+import { ExplanationScreen } from '../features/onboarding/screens/ExplanationScreen'
+import { IntroductionScreen } from '../features/onboarding/screens/IntroductionScreen'
+import { useAppColorScheme } from '../hooks/useAppColorScheme'
+import { customFontsToLoad } from '../theme/typography'
+import { TabsNavigator } from './navigators/TabsNavigator'
 
 type NomaDigAppProps = {
   hideSplashScreen: () => Promise<boolean>
@@ -75,7 +75,7 @@ export const App = ({ hideSplashScreen }: NomaDigAppProps) => {
   }
 
   return (
-    <TamaguiProvider config={config} defaultTheme={"dark_purple"}>
+    <TamaguiProvider config={config} defaultTheme={'dark_purple'}>
       <Theme name={theme}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <Navigation />

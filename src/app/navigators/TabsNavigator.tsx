@@ -1,49 +1,50 @@
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import {DefaultScreen} from "../../features/dashboard/DefaultScreen";
-import {DashboardTabBar} from "../../features/navigation/DashboardTabBar";
-import {translate} from "../../features/i18n/translate";
-import {Home, Laptop, Menu, Plane, Wallet} from "@tamagui/lucide-icons";
-import {TabBarIcon} from "../../features/navigation/components/TabBarIcon";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Home, Laptop, Menu, Plane, Wallet } from '@tamagui/lucide-icons'
+
+import { DefaultScreen } from '../../features/dashboard/DefaultScreen'
+import { translate } from '../../features/i18n/translate'
+import { TabBarIcon } from '../../features/navigation/components/TabBarIcon'
+import { DashboardTabBar } from '../../features/navigation/DashboardTabBar'
 
 export const TabsNavigator = createBottomTabNavigator({
-    tabBar: (props) => <DashboardTabBar {...props} />,
-    options: {initialRouteName: 'Home'},
+  tabBar: (props) => <DashboardTabBar {...props} />,
+  options: { initialRouteName: 'Home' },
 
-    screens: {
-        Cowork: {
-            screen: DefaultScreen,
-            options: {
-                tabBarLabel: translate('navigation.dashboardTabBar.cowork'),
-                tabBarIcon: ({focused}) => <TabBarIcon icon={Laptop} focused={focused}/>
-            },
-        },
-        Finances: {
-            screen: DefaultScreen,
-            options: {
-                tabBarLabel: translate('navigation.dashboardTabBar.finances'),
-                tabBarIcon: ({focused}) => <TabBarIcon icon={Wallet} focused={focused}/>
-            },
-        },
-        Home: {
-            screen: DefaultScreen,
-            options: {
-                tabBarLabel: translate('navigation.dashboardTabBar.home'),
-                tabBarIcon: ({focused}) => <TabBarIcon icon={Home} focused={focused}/>
-            },
-        },
-        Travel: {
-            screen: DefaultScreen,
-            options: {
-                tabBarLabel: translate('navigation.dashboardTabBar.travel'),
-                tabBarIcon: ({focused}) => <TabBarIcon icon={Plane} focused={focused}/>
-            },
-        },
-        More: {
-            screen: DefaultScreen,
-            options: {
-                tabBarLabel: translate('navigation.dashboardTabBar.menu'),
-                tabBarIcon: ({focused}) => <TabBarIcon icon={Menu} focused={focused}/>
-            },
-        },
+  screens: {
+    Cowork: {
+      screen: DefaultScreen,
+      options: {
+        tabBarLabel: translate('navigation.dashboardTabBar.cowork'),
+        tabBarIcon: ({ focused }) => <TabBarIcon icon={Laptop} focused={focused} />,
+      },
     },
-});
+    Finances: {
+      screen: DefaultScreen,
+      options: {
+        tabBarLabel: translate('navigation.dashboardTabBar.finances'),
+        tabBarIcon: ({ focused }) => <TabBarIcon icon={Wallet} focused={focused} />,
+      },
+    },
+    Home: {
+      screen: DefaultScreen,
+      options: {
+        tabBarLabel: translate('navigation.dashboardTabBar.home'),
+        tabBarIcon: ({ focused }) => <TabBarIcon icon={Home} focused={focused} />,
+      },
+    },
+    Travel: {
+      screen: DefaultScreen,
+      options: {
+        tabBarLabel: translate('navigation.dashboardTabBar.travel'),
+        tabBarIcon: ({ focused }) => <TabBarIcon icon={Plane} focused={focused} />,
+      },
+    },
+    More: {
+      screen: DefaultScreen,
+      options: {
+        tabBarLabel: translate('navigation.dashboardTabBar.menu'),
+        tabBarIcon: ({ focused }) => <TabBarIcon icon={Menu} focused={focused} />,
+      },
+    },
+  },
+})
