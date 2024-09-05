@@ -38,13 +38,93 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@serverless-guru/prettier-plugin-import-order": "^0.4.2",
     "@types/react": "~18.2.79",
     "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
-    "eslint": "^9.9.1",
-    "eslint-config-universe": "^13.0.0",
+    "eslint": "9.9.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.30.0",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-promise": "7.1.0",
+    "eslint-plugin-react": "7.35.2",
+    "eslint-plugin-react-native": "4.1.0",
     "prettier": "^3.3.3",
     "typescript": "~5.3.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-native/all",
+      "standard",
+      "prettier"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "react-native",
+      "reactotron"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
+    },
+    "globals": {
+      "__DEV__": false,
+      "jasmine": false,
+      "beforeAll": false,
+      "afterAll": false,
+      "beforeEach": false,
+      "afterEach": false,
+      "test": false,
+      "expect": false,
+      "describe": false,
+      "jest": false,
+      "it": false
+    },
+    "rules": {
+      "@typescript-eslint/ban-ts-ignore": 0,
+      "@typescript-eslint/ban-ts-comment": 0,
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "@typescript-eslint/indent": 0,
+      "@typescript-eslint/member-delimiter-style": 0,
+      "@typescript-eslint/no-empty-interface": 0,
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/no-object-literal-type-assertion": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ],
+      "comma-dangle": 0,
+      "multiline-ternary": 0,
+      "no-undef": 0,
+      "no-unused-vars": 0,
+      "no-use-before-define": 0,
+      "no-global-assign": 0,
+      "quotes": 0,
+      "react-native/no-raw-text": 0,
+      "react/no-unescaped-entities": 0,
+      "react/prop-types": 0,
+      "space-before-function-paren": 0,
+      "reactotron/no-tron-in-production": "error"
+    }
   },
   "expo": {
     "install": {
