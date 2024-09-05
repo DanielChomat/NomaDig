@@ -1,8 +1,11 @@
-import {Text} from "tamagui";
-import {Screen} from "../../../components/Screen";
+import { Text } from 'tamagui'
+
+import { Screen } from '../../../components/Screen'
 
 export const ExplanationScreen = () => {
-    return <Screen>
-        <Text>asdadass</Text>
+  return (
+    <Screen>
+      <Text>asdadass</Text>
     </Screen>
+  )
 }
