@@ -12,6 +12,7 @@ import {config} from "../../tamagui.config";
 import {initialWindowMetrics, SafeAreaProvider} from "react-native-safe-area-context";
 import {useAppColorScheme} from "../hooks/useAppColorScheme";
 import {DefaultScreen} from "../features/dashboard/DefaultScreen";
+import {TabsNavigator} from "./navigators/TabsNavigator";
 
 
 type NomaDigAppProps = {
@@ -38,7 +39,7 @@ const RootStack = createNativeStackNavigator({
                 headerShown: false,
             },
             screens: {
-                Home: DefaultScreen,
+                DashboardTabs: TabsNavigator,
             }
         }
     },
