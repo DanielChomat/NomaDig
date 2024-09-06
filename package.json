@@ -6,7 +6,7 @@
     "format": "prettier --write './**/*.{js,jsx,json,md,ts,tsx}'",
     "check:lint": "prettier --check './**/*.{js,jsx,json,md,ts,tsx}'",
     "check:ts": "tsc --noEmit",
-    "check:tests": "tsc --noEmit",
+    "check:tests": "yarn test",
     "check:code": "yarn check:lint && yarn check:ts && yarn check:tests",
     "test": "jest",
     "test:tdd": "jest --watch",
