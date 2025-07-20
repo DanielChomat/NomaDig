@@ -55,7 +55,14 @@ export default defineConfig([
       'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-      'react/jsx-curly-brace-presence': ['error', { props: 'always' }],
+      'react/jsx-curly-brace-presence': [
+        'error',
+        {
+          props: 'always',
+          children: 'never',
+          propElementValues: 'always',
+        },
+      ],
       'react/jsx-no-undef': 'error',
 
       // TODO: Probably will implement in the future
