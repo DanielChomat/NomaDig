@@ -3,14 +3,14 @@ import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { ParallaxScrollScreenLayout } from '@/components/ParallaxScrollScreenLayout';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   return (
-    <ParallaxScrollView
+    <ParallaxScrollScreenLayout
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
         <IconSymbol
@@ -111,14 +111,14 @@ export default function TabTwoScreen() {
             <ThemedText>
               The{' '}
               <ThemedText type={'defaultSemiBold'}>
-                components/ParallaxScrollView.tsx
+                components/ParallaxScrollScreenLayout.tsx
               </ThemedText>{' '}
               component provides a parallax effect for the header image.
             </ThemedText>
           ),
         })}
       </Collapsible>
-    </ParallaxScrollView>
+    </ParallaxScrollScreenLayout>
   );
 }
 
