@@ -1,6 +1,7 @@
 import { AppHeader } from '@/components/AppHeader';
 import { RouterCloseIcon } from '@/components/router/RouterCloseIcon';
 import { ScreenLayout } from '@/components/ScreenLayout';
+import { TimezonePicker } from '@/components/timezones/TimezonePicker';
 import { Colors } from '@/constants/Colors';
 
 const AddTimezoneScreen = () => {
@@ -12,6 +13,8 @@ const AddTimezoneScreen = () => {
         title={'Add Timezones'}
         shouldRenderSafeArea={false}
       />
+
+      <TimezonePicker />
     </ScreenLayout>
   );
 };
